@@ -12,6 +12,8 @@ In this project, interacting with large database with over a million rows to dra
 - python2
 - vagrant
 - virtual machine
+- PostgreSQL
+- psycopg2 librart
 
 ### setup
 - install vagrant and  virtual machine
