@@ -9,14 +9,14 @@ In this project, interacting with large database with over a million rows to dra
 ## how to run
 
 ### tools
--python2
--vagrant
--virtual machine
+- python2
+- vagrant
+- virtual machine
 
 ### setup
--install vagrant and  virtual machine
--clone this repo
--[download the data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+- install vagrant and  virtual machine
+- clone this repo
+- [download the data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ### running this task
 Start the Vagrant by `vagrant up` and then log into it with `vagrant ssh`
