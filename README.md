@@ -19,8 +19,8 @@ In this project, interacting with large database with over a million rows to dra
 -[download the data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ### running this task
-Start the Vagrant by 'vagrant up' and then log into it with 'vagrant ssh'
+Start the Vagrant by `vagrant up` and then log into it with `vagrant ssh`
 
-To load the data, run command 'psql -d news -f newsdata.sql'
+To load the data, run command `psql -d news -f newsdata.sql`
 
-To execute the program run 'prthon analysis-db.py' in your terminal
+To execute the program run `prthon analysis-db.py` in your terminal
