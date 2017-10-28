@@ -9,10 +9,10 @@ query1 = ('''
     where log.status like '%200%'
     group by articles.title, log.path
     order by views desc
-    limit 3; 
+    limit 3;
     ''')
 
-question2 ='''2. Who are the most popular article authors of all time? '''
+question2 = '''2. Who are the most popular article authors of all time? '''
 query2 = ('''
     select authors.name, count(*) as views
     from authors
@@ -26,10 +26,12 @@ query2 = ('''
     limit 3;
     ''')
 
-question3 =''' On which days did more than 1% of requests lead to errors?'''
+question3 = ''' On which days did more than 1% of requests lead to errors?'''
 query3 = ("""
     SELECT date, rate
-    FROM (SELECT to_char(log.time, 'Mon DD, YYYY') as date, round(cast(100 * sum(CASE WHEN log.status like '%404%' THEN 1 ELSE 0 END)::float /
+    FROM (SELECT to_char(log.time, 'Mon DD, YYYY') as date,
+          round(cast(100 * sum(CASE WHEN log.status like '%404%'
+          THEN 1 ELSE 0 END)::float /
           count(*) AS numeric), 2) as rate
           FROM log
           GROUP BY date
@@ -43,7 +45,6 @@ def get_results(query):
     pg = psycopg2.connect("dbname=news")
     c = pg.cursor()
     c.execute(query)
-
     results =  c.fetchall()
     for item in results:
         print item
@@ -57,5 +58,3 @@ if __name__ == '__main__':
         print question
         get_results(query)
         print '\n'
-
-    
