@@ -13,7 +13,7 @@ In this project, interacting with large database with over a million rows to dra
 - vagrant
 - virtual machine
 - PostgreSQL
-- psycopg2 librart
+- psycopg2 library
 
 ### setup
 - install vagrant and  virtual machine
